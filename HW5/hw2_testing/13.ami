@@ -1,0 +1,51 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal_var a0
+
+M_print_4:
+	#formal_var a0
+
+M_print_5:
+	#formal_var a0
+
+M_print_6:
+	#formal_var a0
+
+
+#Class a
+	#1 Non-static Fileds
+
+C_1:
+	#formal_var a0
+
+	move_immed_i t0, 4384412736
+	move_immed_i t1, 0
+	move t2, a0
+	hstore t0, t1, t2
+
+	ret
+
+M_set_7:
+	#formal_var a0
+
+	#local_var t0
+
+	move_immed_i t1, 0
+	move t0, t1
+L0:
+	ilt t2, t0, a0
+	bz t2, L1
+#L2 for Continue
+L2:
+	move_immed_i t3, 1
+	iadd t0, t0, t3
+	jmp L0
+#L1 for Break
+L1:
+

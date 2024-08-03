@@ -1,0 +1,227 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class IntList
+	#Non-static Fileds is 2
+
+M_create_list_7:
+	#formal v for a0
+
+	#local new_element for t0
+
+	move_immed_i t1, 4391376064
+	move_immed_i t2, 0
+	move t3, a0
+	hstore t1, t2, t3
+
+	move_immed_i t1, 4391376064
+	move_immed_i t2, 1
+	move t3, 
+	hstore t1, t2, t3
+
+	move a0, t0
+	ret
+
+M_insert_8:
+	#this for a0
+
+	#formal v for a1
+
+	#local new_element for t0
+
+	save a0
+	save a1
+	save t0
+	move a0, a1
+	call M_create_list_7
+	move t1, a0
+	restore t0
+	restore a1
+	restore a0
+	move t0, t1
+
+	move_immed_i t1, 4391376064
+	move_immed_i t2, 1
+	move t3, a0
+	hstore t1, t2, t3
+
+	move a0, t0
+	ret
+
+M_search_9:
+	#this for a0
+
+	#formal v for a1
+
+	move_immed_i t0, 4391376064
+	move_immed_i t1, 0
+	hload t2, t0, t1
+	igeq t3, t2, a1
+	ileq t4, t2, a1
+	imul t5, t3, t4
+	bz t5, L0
+	move_immed_i t6, 1
+	move a0, t6
+	ret
+
+	jmp L1
+L0:
+	move_immed_i t6, 4391376064
+	move_immed_i t7, 1
+	hload t8, t6, t7
+	igeq t9, t8, 
+	ileq t10, t8, 
+	imul t11, t9, t10
+	bz t11, L2
+	move_immed_i t12, 0
+	move a0, t12
+	ret
+
+	jmp L3
+L2:
+	save a0
+	save a1
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	save t7
+	save t8
+	save t9
+	save t10
+	save t11
+	move a0, a1
+	call M_search_9
+	move t12, a0
+	restore t11
+	restore t10
+	restore t9
+	restore t8
+	restore t7
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	restore a1
+	restore a0
+	move a0, t12
+	ret
+L3:
+L1:
+
+M_search2_10:
+	#this for a0
+
+	#formal v for a1
+
+	#local x for t0
+
+	move t0, a0
+
+L4:
+	move_immed_i t1, 4391376064
+	move_immed_i t2, 0
+	hload t3, t1, t2
+	igeq t4, t3, a1
+	ileq t5, t3, a1
+	imul t6, t4, t5
+	move_immed_i t4, 1
+	isub t6, t4, t6
+	move t7, t6
+	bz t7, L5
+	move_immed_i t8, 4391376064
+	move_immed_i t9, 1
+	hload t10, t8, t9
+	igeq t11, t10, 
+	ileq t12, t10, 
+	imul t13, t11, t12
+	move_immed_i t11, 1
+	isub t13, t11, t13
+	move t7, t13
+L5:
+	bz t7, L6
+#L7 for Continue
+L7:
+	move_immed_i t14, 4391376064
+	move_immed_i t15, 1
+	hload t16, t14, t15
+	move t0, t16
+	jmp L4
+#L6 for Break
+L6:
+
+	#local y for t1
+
+	#local g for t2
+
+	move_immed_f t3, 1000.000000
+	move t2, t3
+
+	move_immed_i t3, 1
+	move a0, t3
+	ret
+
+M_length_11:
+	#this for a0
+
+	move_immed_i t0, 4391376064
+	move_immed_i t1, 1
+	hload t2, t0, t1
+	igeq t3, t2, 
+	ileq t4, t2, 
+	imul t5, t3, t4
+	bz t5, L8
+	move_immed_i t6, 1
+	move a0, t6
+	ret
+	jmp L9
+L8:
+	move_immed_i t7, 1
+	save a0
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	save t7
+	call M_length_11
+	move t8, a0
+	restore t7
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	restore a0
+	iadd t9, t7, t8
+	move a0, t9
+	ret
+L9:
+

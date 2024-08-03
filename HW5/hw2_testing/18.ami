@@ -1,0 +1,22 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal_var a0
+
+M_print_4:
+	#formal_var a0
+
+M_print_5:
+	#formal_var a0
+
+M_print_6:
+	#formal_var a0
+
+
+#Class a
+M_x_7:

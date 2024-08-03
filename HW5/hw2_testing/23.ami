@@ -1,0 +1,50 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal_var a0
+
+M_print_4:
+	#formal_var a0
+
+M_print_5:
+	#formal_var a0
+
+M_print_6:
+	#formal_var a0
+
+
+#Class a
+C_1:
+	#formal_var a0
+	#formal_var a1
+
+	ret
+
+M_x_7:
+	#local_var t0
+
+	move_immed_i t1, 10
+	move_immed_f t2, 20.000000
+	move_immed_i t3, 0
+	halloc t4, t3
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	move a0, t4
+	move a1, t1
+	move a2, t2
+	call C_1
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t0, t4
+
