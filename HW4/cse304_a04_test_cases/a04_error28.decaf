@@ -1,0 +1,10 @@
+class a04_error28
+{
+    public static void main()
+    {
+        int a;
+        
+        a = 0;
+        a = super.x;
+    }
+}

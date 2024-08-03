@@ -1,0 +1,16 @@
+class a04_rfib{
+    static int fib(int n) {
+        if (n <= 2)
+            return 1;
+        else
+            return a04_rfib.fib(n-1) + a04_rfib.fib(n-2);
+    }
+
+    public static void main() {
+        int n, r;
+
+        n = 5;
+
+        r = a04_rfib.fib(n);
+    }
+}

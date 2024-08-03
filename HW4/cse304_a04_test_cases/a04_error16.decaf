@@ -1,0 +1,9 @@
+class a04_error16
+{
+    public static void main()
+    {
+        int a;
+        
+        a = 10 * true;
+    }
+}

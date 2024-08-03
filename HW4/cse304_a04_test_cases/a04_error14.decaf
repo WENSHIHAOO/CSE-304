@@ -1,0 +1,9 @@
+class a04_error14
+{
+    public static void main()
+    {
+        int a;
+        
+        a = 14 + false;
+    }
+}

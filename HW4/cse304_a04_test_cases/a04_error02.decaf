@@ -1,0 +1,13 @@
+class a04_error02
+{
+    public static void main()
+    {
+        int a;
+        
+        a = 0;
+        if (17 > 5)
+        {
+            a = true;
+        }
+    }
+}

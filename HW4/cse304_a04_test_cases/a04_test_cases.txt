@@ -1,0 +1,53 @@
+CSE 304, Spring 2022, Assignment 04
+Test Cases
+
+Type System Errors:
+  01. IF statement - Condition not boolean
+  02. IF statement - Type error in THEN statement
+  03. IF statement - Type error in ELSE statement
+  04. WHILE statement - Condition not boolean
+  05. WHILE statement - Type error in loop body
+  06. FOR statement - Condition not boolean
+  07. FOR statement - Type error in initializer
+  08. FOR statement - Type error in update expression
+  09. FOR statement - Type error in loop body
+  10. RETURN statement - VOID method returns a value
+  11. RETURN statement - NON-VOID method returns nothing
+  12. UNARY MINUS - Expression is not a number
+  13. UNARY NEGATION - Expression is not boolean
+  14. BINARY ADDITION - Operand not a number
+  15. BINARY SUBTRACTION - Operand not a number
+  16. BINARY MULTIPLICATION - Operand not a number
+  17. BINARY DIVISION - Operand not a number
+  18. BINARY AND - Operand not a boolean
+  19. BINARY OR - Operand not a boolean
+  20. BINARY LESS THAN - Operand not a number
+  21. BINARY LESS THAN OR EQUAL - Operand not a number
+  22. BINARY GREATER THAN - Operand not a number
+  23. BINARY GREATER THAN OR EQUAL - Operand not a number
+  24. BINARY EQUALITY - Operands are not of congruent types
+  25. BINARY INEQUALITY - Operands are not of congruent types
+  26. AUTO-INCREMENT - Operand is not a number
+  27. AUTO-DECREMENT - Operand is not a number
+  28. SUPER EXPRESSION - No super class
+  
+Name Resolution Errors:
+  29. STATIC FIELD ACCESS - No such field
+  30. NON-STATIC FIELD ACCESS - No such field
+  31. CONSTRUCTOR INVOCATION - Bad arguments
+  32. STATIC METHOD INVOCATION - No such method
+  33. NON-STATIC METHOD INVOCATION - No such method
+  34. STATIC METHOD INOVOCATION - Bad arguments
+  35. NON-STATIC METHOD INOVOCATION - Bad arguments
+  
+General:
+  36. a04_nrfib.decaf
+  37. a04_rfib.decaf
+  38. HW03_example: a04_test38.decaf
+  39. IntList.decaf
+  40. a04_Bank.decaf
+  
+THINGS I DID NOT TEST FOR:
+  -Errors involving object of static and non-static field accesses and method
+   invocations.
+  -Probably a couple of other things I can't remember.

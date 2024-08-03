@@ -1,0 +1,17 @@
+class a04_error11
+{
+    public static int double(int n)
+    {
+        int r;
+        
+        r = n * 2;
+        return;
+    }
+    
+    public static void main()
+    {
+        int a;
+        
+        a = a04_error11.double(5);
+    }
+}

@@ -1,0 +1,12 @@
+class a04_error12
+{
+    
+    public static void main()
+    {
+        boolean a;
+        boolean b;
+        
+        a = true;
+        b = -a;
+    }
+}

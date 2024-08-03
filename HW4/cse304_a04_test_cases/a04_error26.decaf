@@ -1,0 +1,10 @@
+class a04_error26
+{
+    public static void main()
+    {
+        boolean a;
+        
+        a = true;
+        a++;
+    }
+}

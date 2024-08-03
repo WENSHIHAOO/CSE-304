@@ -1,0 +1,14 @@
+class a04_error10
+{
+    public static void f()
+    {
+        return 17;
+    }
+    
+    public static void main()
+    {
+        int a;
+        
+        a04_error10.f();
+    }
+}

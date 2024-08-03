@@ -1,0 +1,16 @@
+class a04_error05
+{
+    public static void main()
+    {
+        int a;
+        int i;
+        
+        a = 0;
+        i = 0;
+        while (17 > 5)
+        {
+            a = a + true;
+            i++;
+        }
+    }
+}

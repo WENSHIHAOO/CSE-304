@@ -1,0 +1,9 @@
+class a04_error24
+{
+    public static void main()
+    {
+        boolean a;
+        
+        a = true == 10;
+    }
+}

@@ -1,0 +1,10 @@
+class a04_error27
+{
+    public static void main()
+    {
+        boolean a;
+        
+        a = false;
+        a--;
+    }
+}
