@@ -1,0 +1,53 @@
+.static_data 1
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class Circle
+	#Non-static Fileds is 2
+
+C_1:
+	#formal c for a0
+	#formal r for a1
+
+	move_immed_i t0, 4452485248
+	move_immed_i t1, 0
+	move t2, a0
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4452485248
+	move_immed_i t1, 1
+	move t2, a1
+	hstore t0, t1, t2
+
+	move_immed_i t0, 0
+	move_immed_f t2, 3.141590
+	move t1, t2
+	hstore sap, t0, t1
+
+	ret
+
+
+#Class test033
+M_main_7:
+	#local a for t0
+
+	move_immed_i t1, 0
+	hload t2, sap, t1
+	move t0, t2
+

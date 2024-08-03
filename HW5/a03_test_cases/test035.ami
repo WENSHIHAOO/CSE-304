@@ -1,0 +1,87 @@
+.static_data 1
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class Circle
+	#Non-static Fileds is 1
+
+C_1:
+	#formal r for a0
+
+	move_immed_i t0, 4355269248
+	move_immed_i t1, 0
+	move t2, a0
+	hstore t0, t1, t2
+
+	move_immed_i t0, 0
+	move_immed_f t2, 3.141590
+	move t1, t2
+	hstore sap, t0, t1
+
+	ret
+
+M_area_7:
+	#this for a0
+
+	#local rSquared for t0
+
+	#local result for t1
+
+	move_immed_i t2, 4355269248
+	move_immed_i t3, 0
+	hload t4, t2, t3
+	move_immed_i t5, 4355269248
+	move_immed_i t6, 0
+	hload t7, t5, t6
+	fmul t8, t4, t7
+	move t0, t8
+
+	move_immed_i t2, 0
+	hload t3, sap, t2
+	fmul t4, t0, t3
+	move t1, t4
+
+	move a0, t1
+	ret
+
+
+#Class test035
+M_main_8:
+	#local x for t0
+
+	#local c for t1
+
+	move_immed_f t2, 5.000000
+	move t0, t2
+
+	move_immed_i t2, 1
+	halloc t3, t2
+	save t0
+	save t1
+	save t2
+	save t3
+	move a0, t3
+	move a1, t0
+	call C_1
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t1, t3
+

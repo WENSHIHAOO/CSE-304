@@ -1,0 +1,39 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class test031
+M_add5_7:
+	#formal n for a0
+
+	move_immed_i t0, 5
+	iadd t1, a0, t0
+	move a0, t1
+	ret
+
+M_main_8:
+	#local a for t0
+
+	save t0
+	move a0, t0
+	call M_add5_7
+	move t1, a0
+	restore t0
+	move t0, t1
+

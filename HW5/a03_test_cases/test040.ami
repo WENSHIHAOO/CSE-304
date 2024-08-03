@@ -1,0 +1,111 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class rfib
+M_fib_7:
+	#formal n for a0
+
+	move_immed_i t0, 2
+	ileq t1, a0, t0
+	bz t1, L0
+	move_immed_i t2, 1
+	move a0, t2
+	ret
+	jmp L1
+L0:
+	move_immed_i t3, 1
+	isub t4, a0, t3
+	save a0
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	move a0, t4
+	call M_fib_7
+	move t5, a0
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	restore a0
+	move_immed_i t6, 2
+	isub t7, a0, t6
+	save a0
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	save t7
+	move a0, t7
+	call M_fib_7
+	move t8, a0
+	restore t7
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	restore a0
+	iadd t9, t5, t8
+	move a0, t9
+	ret
+L1:
+
+M_main_8:
+	#local n for t0
+
+	save t0
+	call M_scan_int_1
+	move t1, a0
+	restore t0
+	move t0, t1
+
+	save t0
+	move a0, 
+	call M_print_6
+	move t1, a0
+	restore t0
+
+	save t0
+	move a0, t0
+	call M_fib_7
+	move t1, a0
+	restore t0
+	save t0
+	save t1
+	move a0, t1
+	call M_print_3
+	move t2, a0
+	restore t1
+	restore t0
+
+	save t0
+	move a0, 
+	call M_print_6
+	move t1, a0
+	restore t0
+

@@ -1,0 +1,424 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class BankAccount
+	#Non-static Fileds is 3
+
+C_1:
+	#formal fn for a0
+	#formal ln for a1
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 1
+	move t2, a0
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 2
+	move t2, a1
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 0
+	move_immed_f t3, 0.000000
+	move t2, t3
+	hstore t0, t1, t2
+
+	ret
+
+M_deposit_7:
+	#this for a0
+
+	#formal amount for a1
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 0
+	move_immed_i t3, 4560560448
+	move_immed_i t4, 0
+	hload t5, t3, t4
+	fadd t6, t5, a1
+	move t2, t6
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 0
+	hload t2, t0, t1
+	move a0, t2
+	ret
+
+M_withdrawal_8:
+	#this for a0
+
+	#formal amount for a1
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 0
+	hload t2, t0, t1
+	fgt t3, t2, a1
+	bz t3, L0
+	move_immed_i t4, 4560560448
+	move_immed_i t5, 0
+	move_immed_i t7, 4560560448
+	move_immed_i t8, 0
+	hload t9, t7, t8
+	fsub t10, t9, a1
+	move t6, t10
+	hstore t4, t5, t6
+
+	jmp L1
+L0:
+	save a0
+	save a1
+	save t0
+	save t1
+	save t2
+	save t3
+	move a0, 
+	call M_print_6
+	move t4, a0
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	restore a1
+	restore a0
+
+L1:
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 0
+	hload t2, t0, t1
+	move a0, t2
+	ret
+
+M_get_balance_9:
+	#this for a0
+
+	move_immed_i t0, 4560560448
+	move_immed_i t1, 0
+	hload t2, t0, t1
+	move a0, t2
+	ret
+
+
+#Class CheckingAccount
+	#Non-static Fileds is 4
+
+C_2:
+	#formal fn for a0
+	#formal ln for a1
+
+	move_immed_i t0, 4560562880
+	move_immed_i t1, 1
+	move t2, a0
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4560562880
+	move_immed_i t1, 2
+	move t2, a1
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4560562880
+	move_immed_i t1, 0
+	move_immed_f t3, 0.000000
+	move t2, t3
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4560562880
+	move_immed_i t1, 3
+	move_immed_i t3, 0
+	move t2, t3
+	hstore t0, t1, t2
+
+	ret
+
+M_debit_10:
+	#this for a0
+
+	#formal amount for a1
+
+	#local ccn for t0
+
+	move_immed_i t1, 4560562880
+	move_immed_i t2, 3
+	hload t3, t1, t2
+	move t0, t3
+
+	move_immed_i t1, 4560562880
+	move_immed_i t2, 0
+	hload t3, t1, t2
+	flt t4, a1, t3
+	bz t4, L2
+	move_immed_i t5, 4560562880
+	move_immed_i t6, 3
+	hload t7, t5, t6
+	move_immed_i t8, 1
+	iadd t7, t7, t8
+	hstore t5, t6, t7
+
+	move_immed_i t5, 4560562880
+	move_immed_i t6, 0
+	move_immed_i t8, 4560562880
+	move_immed_i t9, 0
+	hload t10, t8, t9
+	fsub t11, t10, a1
+	move t7, t11
+	hstore t5, t6, t7
+
+	jmp L3
+L2:
+	save a0
+	save a1
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	move a0, 
+	call M_print_6
+	move t5, a0
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	restore a1
+	restore a0
+
+L3:
+
+	move a0, t0
+	ret
+
+
+#Class test042
+M_main_11:
+	#local x for t0
+
+	#local y for t1
+
+	#local z for t2
+
+	#local w for t3
+
+	#local ca1 for t4
+
+	#local ca2 for t5
+
+	move_immed_i t6, 4
+	halloc t7, t6
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	save t7
+	move a0, t7
+	move a1, 
+	move a2, 
+	call C_2
+	restore t7
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t4, t7
+
+	move_immed_i t6, 4
+	halloc t7, t6
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	save t7
+	move a0, t7
+	move a1, 
+	move a2, 
+	call C_2
+	restore t7
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t5, t7
+
+	move_immed_f t6, 10000.000000
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	move a0, t6
+	call M_deposit_7
+	move t7, a0
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t0, t7
+
+	move_immed_f t6, 100.000000
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	move a0, t6
+	call M_deposit_7
+	move t7, a0
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t1, t7
+
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	call M_get_balance_9
+	move t6, a0
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t0, t6
+
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	call M_get_balance_9
+	move t6, a0
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t1, t6
+
+	move_immed_f t6, 1000.000000
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	move a0, t6
+	call M_withdrawal_8
+	move t7, a0
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t0, t7
+
+	move_immed_f t6, 1000.000000
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	move a0, t6
+	call M_withdrawal_8
+	move t7, a0
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t1, t7
+
+	move_immed_f t6, 1000.000000
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	move a0, t6
+	call M_debit_10
+	move t7, a0
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t2, t7
+
+	move_immed_f t6, 1000.000000
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	move a0, t6
+	call M_debit_10
+	move t7, a0
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t3, t7
+

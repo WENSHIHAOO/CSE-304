@@ -1,0 +1,32 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class test002
+M_main_7:
+	#local a for t0
+	#local b for t1
+
+	move_immed_i t2, 17
+	move t0, t2
+
+	move_immed_i t2, -1
+	imul t2, t2, t0
+	move t1, t2
+
