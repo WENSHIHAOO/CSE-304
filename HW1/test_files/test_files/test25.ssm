@@ -1,0 +1,8 @@
+ildc
+20
+ildc 10 iadd
+dup
+lbl1:
+    idiv
+    dup
+pop

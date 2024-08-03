@@ -1,0 +1,34 @@
+CSE 304, Compiler Design
+Spring, 2023
+List of Test Programs for Assignment 01
+
+(This is copied directly from my grading script; that's why it looks like cause,
+because it is.)
+
+
+# Format of triples: (<test number>, <test name>, <test result>)
+tests = [('1', 'TEST ILDC', 10),
+         ('2', 'TEST IADD', 19),
+         ('3', 'TEST ISUB', -2),
+         ('4', 'TEST IMUL', 40),
+         ('5', 'TEST IDIV', 10),
+         ('6', 'TEST IMOD', 2),
+         ('7', 'TEST POP', 1337),
+         ('8', 'TEST DUP', 0),
+         ('9', 'TEST SWAP', 4004),
+         ('10', 'TEST STORE & LOAD', 29),
+         ('11', 'TEST JMP', 41),
+         ('12', 'TEST JZ - True', 37),
+         ('13', 'TEST JZ - False', 41),
+         ('14', 'TEST JNZ - True', 29),
+         ('15', 'TEST JNZ - False', 59),
+         ('16', 'TEST BAD INSTRUCTION', 'ERROR'),
+         ('17', 'TEST BAD NUMBER', 'ERROR'),
+         ('18', 'TEST BAD LABEL', 'ERROR'),
+         ('19', 'TEST BAD JUMP', 'ERROR'),
+         ('20', 'TEST BAD STACK ACCESS', 'ERROR'),
+         ('21', 'TEST BAD STORE ACCESS', 'ERROR'),
+         ('22', 'TEST EX02', 136),
+         ('23', 'TEST CMK01 - FACTORIAL(7)', 5040),
+         ('24', 'TEST CMK02 - FIBONACCI(20)', 6765),
+         ('25', 'TEST CMK03 - WHITESPACE', 1)]

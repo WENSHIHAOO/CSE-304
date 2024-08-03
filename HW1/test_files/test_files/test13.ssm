@@ -1,0 +1,5 @@
+ildc 37
+ildc 7
+jz lbl1
+ildc 41
+lbl1: dup

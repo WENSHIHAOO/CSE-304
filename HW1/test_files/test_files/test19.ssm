@@ -1,0 +1,6 @@
+ildc 10
+ildc 0
+jz there
+ildc 40
+here: dup
+pop

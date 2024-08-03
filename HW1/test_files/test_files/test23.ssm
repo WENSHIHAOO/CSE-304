@@ -1,0 +1,16 @@
+ildc 7
+dup
+lbl1: ildc 1
+isub
+dup
+dup
+jz lbl2
+ildc 1
+swap
+store
+imul
+ildc 1
+load
+jmp lbl1
+lbl2: pop
+pop

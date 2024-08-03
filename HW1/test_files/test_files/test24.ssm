@@ -1,0 +1,27 @@
+ildc 0
+ildc 0
+store
+ildc 1
+ildc 1
+store
+ildc 20
+lbl1: ildc 1
+isub
+dup
+jz lbl2
+ildc 1
+load
+dup
+ildc 0
+load
+iadd
+ildc 1
+swap
+store
+ildc 0
+swap
+store
+jmp lbl1
+lbl2: pop
+ildc 1
+load

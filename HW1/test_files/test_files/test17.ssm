@@ -1,0 +1,8 @@
+ildc 10
+ildc 20
+isub
+ildc 18.3
+imul
+dup
+swap
+pop

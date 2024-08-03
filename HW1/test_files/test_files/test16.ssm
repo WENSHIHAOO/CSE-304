@@ -1,0 +1,7 @@
+ildc 10
+ildc 20
+imul
+imov
+dup
+swap
+pop

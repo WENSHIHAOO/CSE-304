@@ -1,0 +1,5 @@
+ildc 29
+ildc 8
+jnz lbl1
+ildc 59
+lbl1: dup

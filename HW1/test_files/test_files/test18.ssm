@@ -1,0 +1,8 @@
+ildc 20
+ildc 10
+idiv
+4there: ildc 12
+dup
+swap
+pop
+jmp 4there

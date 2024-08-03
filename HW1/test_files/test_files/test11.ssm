@@ -1,0 +1,4 @@
+ildc 41
+jmp lbl1
+ildc 37
+lbl1: dup
