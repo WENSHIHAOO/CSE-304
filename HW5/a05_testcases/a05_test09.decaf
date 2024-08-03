@@ -1,0 +1,37 @@
+class A
+{
+    public int i;
+    public float f;
+    public boolean b;
+    
+    public A(int a1, float a2, boolean a3)
+    {
+        this.i = a1;
+        this.f = a2;
+        this.b = a3;
+    }
+}
+
+class a05_test09
+{
+    public static void main()
+    {
+        int i1;
+        int i2;
+        float f1;
+        float f2;
+        boolean b1;
+        boolean b2;
+        A a;
+        
+        i1 = 10;
+        f1 = 20.0;
+        b1 = true;
+        
+        a = new A(i1, f1, b1);
+        
+        i2 = a.i;
+        f2 = a.f;
+        b2 = a.b;
+    }
+}

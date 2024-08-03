@@ -1,0 +1,22 @@
+class a05_test04
+{
+    public static void main()
+    {
+        int i;
+        int j;
+        int k;
+        
+        i = 10;
+        j = 20;
+        k = 0;
+        
+        if (i < j)
+        {
+            k = i + j;
+        }
+        else
+        {
+            k = j - i;
+        }
+    }
+}

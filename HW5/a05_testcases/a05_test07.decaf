@@ -1,0 +1,19 @@
+class a05_test07
+{
+    public static int double(int n)
+    {
+        int r;
+        
+        r = n * 2;
+        return r;
+    }
+    
+    public static void main()
+    {
+        int i;
+        int j;
+        
+        i = 10;
+        j = a05_test07.double(i);
+    }
+}

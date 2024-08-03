@@ -1,0 +1,34 @@
+class A
+{
+    public int factor;
+    
+    public A(int f)
+    {
+        this.factor = f;
+    }
+    
+    public int nfold(int n)
+    {
+        int r;
+        
+        r = n * this.factor;
+        return r;
+    }
+}
+
+class a05_test10
+{
+    public static void main()
+    {
+        int i1;
+        int i2;
+        int i3;
+        A a;
+        
+        i1 = 10;
+        i2 = 3;
+        a = new A(i1);
+        
+        i3 = a.nfold(i2);
+    }
+}

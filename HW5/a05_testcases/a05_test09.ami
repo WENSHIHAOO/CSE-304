@@ -1,0 +1,113 @@
+.static_data 0
+
+#Class In
+M_scan_int_1:
+M_scan_float_2:
+
+#Class Out
+M_print_3:
+	#formal i for a0
+
+M_print_4:
+	#formal f for a0
+
+M_print_5:
+	#formal b for a0
+
+M_print_6:
+	#formal s for a0
+
+
+#Class A
+	#Non-static Fileds is 3
+
+C_1:
+	#formal a1 for a0
+	#formal a2 for a1
+	#formal a3 for a2
+
+	move_immed_i t0, 4398537536
+	move_immed_i t1, 0
+	move t2, a0
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4398537536
+	move_immed_i t1, 1
+	move t2, a1
+	hstore t0, t1, t2
+
+	move_immed_i t0, 4398537536
+	move_immed_i t1, 2
+	move t2, a2
+	hstore t0, t1, t2
+
+	ret
+
+
+#Class a05_test09
+M_main_7:
+	#local i1 for t0
+
+	#local i2 for t1
+
+	#local f1 for t2
+
+	#local f2 for t3
+
+	#local b1 for t4
+
+	#local b2 for t5
+
+	#local a for t6
+
+	move_immed_i t7, 10
+	move t0, t7
+
+	move_immed_f t7, 20.000000
+	move t2, t7
+
+	move_immed_i t7, 1
+	move t4, t7
+
+	move_immed_i t7, 3
+	halloc t8, t7
+	save t0
+	save t1
+	save t2
+	save t3
+	save t4
+	save t5
+	save t6
+	save t7
+	save t8
+	move a0, t8
+	move a1, t0
+	move a2, t2
+	move a3, t4
+	call C_1
+	restore t8
+	restore t7
+	restore t6
+	restore t5
+	restore t4
+	restore t3
+	restore t2
+	restore t1
+	restore t0
+	move t6, t8
+
+	move_immed_i t7, 4398537536
+	move_immed_i t8, 0
+	hload t9, t7, t8
+	move t1, t9
+
+	move_immed_i t7, 4398537536
+	move_immed_i t8, 1
+	hload t9, t7, t8
+	move t3, t9
+
+	move_immed_i t7, 4398537536
+	move_immed_i t8, 2
+	hload t9, t7, t8
+	move t5, t9
+

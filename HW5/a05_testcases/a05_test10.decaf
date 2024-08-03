@@ -1,0 +1,22 @@
+class A
+{
+    public static int double(int n)
+    {
+        int r;
+        
+        r = 2 * n;
+        return r;
+    }
+}
+
+class a05_test10
+{
+    public static void main()
+    {
+        int i1;
+        int i2;
+        
+        i1 = 10;
+        i2 = A.double(i1);
+    }
+}
